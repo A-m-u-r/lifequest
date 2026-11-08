@@ -1,0 +1,67 @@
+.root {
+  --progress-circle-color: var(--color-success);
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: var(--progress-circle-size);
+  height: var(--progress-circle-size);
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.ring {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.track {
+  stroke: var(--color-gray-200);
+}
+.fill {
+  stroke: var(--progress-circle-color);
+  transition:
+    stroke-dashoffset var(--transition-slower),
+    stroke var(--transition-base),
+    opacity var(--transition-fast);
+}
+.primary {
+  --progress-circle-color: var(--color-primary);
+}
+.success {
+  --progress-circle-color: var(--color-success);
+}
+.warning {
+  --progress-circle-color: var(--color-warning);
+}
+.error {
+  --progress-circle-color: var(--color-error);
+}
+.info {
+  --progress-circle-color: var(--color-info);
+}
+
+.content {
+  position: absolute;
+  inset: calc(var(--progress-circle-stroke) + var(--sp-2));
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  min-height: 0;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  text-align: center;
+}
+.content > img,
+.content > svg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fill {
+    transition: none;
+  }
+}
