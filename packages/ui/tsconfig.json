@@ -13,10 +13,12 @@
     "noEmit": true
   },
   "include": [
-    "src"
+    "src",
+    ".storybook"
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "storybook-static"
   ]
 }

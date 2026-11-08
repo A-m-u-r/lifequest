@@ -28,3 +28,21 @@ pnpm build
 ```
 
 Исходные общие конфиги: https://github.com/kyzne4ik/e-soft-final.
+
+## Storybook
+
+Из корня проекта:
+
+```sh
+pnpm storybook
+```
+
+Открыть http://localhost:6006. Истории компонентов хранятся рядом с ними
+в файлах `*.stories.tsx` (lowercase/kebab-case). Документация и controls
+генерируются автоматически.
+
+```sh
+pnpm build-storybook
+```
+
+Статическая сборка: `packages/ui/storybook-static`.

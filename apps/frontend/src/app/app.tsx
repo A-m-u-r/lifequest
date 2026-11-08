@@ -1,4 +1,4 @@
-import { Button } from "@repo/ui/button";
+import { Button } from "@repo/ui/atoms/button";
 
 export default function App() {
   return (

@@ -3,11 +3,20 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./*": "./src/*.tsx"
+    "./tokens.css": "./src/tokens.css",
+    "./atoms/*": "./src/atoms/*/index.ts",
+    "./molecules/*": "./src/molecules/*/index.ts",
+    "./organisms/*": "./src/organisms/*/index.ts",
+    "./layouts/*": "./src/layouts/*/index.ts",
+    "./hooks/*": "./src/hooks/*/index.ts",
+    "./hocs/*": "./src/hocs/*/index.ts",
+    "./libs/*": "./src/libs/*/index.ts"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "storybook": "storybook dev -p 6006 --no-open --disable-telemetry",
+    "build-storybook": "storybook build --disable-telemetry"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -18,7 +27,11 @@
     "eslint": "^9.39.1",
     "typescript": "~6.0.2",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "storybook": "10.6.6",
+    "@storybook/react-vite": "10.6.6",
+    "@storybook/addon-docs": "10.6.6",
+    "vite": "^8.0.12"
   },
   "type": "module",
   "peerDependencies": {
