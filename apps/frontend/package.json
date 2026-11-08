@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "check-types": "tsc -b --noEmit",
     "lint": "eslint . --max-warnings 0",
-    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,scss,md}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,css,scss,json,md,mdx}\""
   },
   "dependencies": {
     "@repo/ui": "workspace:*",

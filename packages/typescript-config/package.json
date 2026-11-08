@@ -8,5 +8,11 @@
     "base.json",
     "node.json",
     "vite.json"
-  ]
+  ],
+  "devDependencies": {
+    "prettier": "3.9.6"
+  },
+  "scripts": {
+    "format": "prettier --write \"*.{ts,tsx,js,jsx,css,scss,json,md,mdx}\""
+  }
 }

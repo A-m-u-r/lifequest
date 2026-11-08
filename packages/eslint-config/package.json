@@ -19,10 +19,14 @@
     "eslint-plugin-turbo": "^2.9.6",
     "globals": "^16.5.0",
     "typescript": "~6.0.2",
-    "typescript-eslint": "^8.60.1"
+    "typescript-eslint": "^8.60.1",
+    "prettier": "3.9.6"
   },
   "peerDependencies": {
     "eslint": "^9.39.1",
     "typescript": "~6.0.2"
+  },
+  "scripts": {
+    "format": "prettier --write \"*.{ts,tsx,js,jsx,css,scss,json,md,mdx}\""
   }
 }
