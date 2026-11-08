@@ -1,20 +1,37 @@
 import pluginReactHooks from "eslint-plugin-react-hooks";
+import pluginReact from "eslint-plugin-react";
+import pluginReactRefresh from "eslint-plugin-react-refresh";
 import globals from "globals";
-import { config as baseConfig } from "./base.js";
+import { baseConfig } from "./base.js";
 
 /**
- * A custom ESLint configuration for libraries that use React.
+ * Конфиг ESLint для пакетов и приложений, использующих React.
  *
- * @type {import("eslint").Linter.Config[]} */
-export const config = [
+ * @type {import("eslint").Linter.Config[]}
+ */
+export const reactInternalConfig = [
   ...baseConfig,
+  pluginReact.configs.flat.recommended,
   {
     languageOptions: {
+      ...pluginReact.configs.flat.recommended.languageOptions,
       globals: {
         ...globals.serviceworker,
         ...globals.browser,
       },
     },
   },
-  pluginReactHooks.configs.flat.recommended,
+  {
+    plugins: {
+      "react-hooks": pluginReactHooks,
+      "react-refresh": pluginReactRefresh,
+    },
+    settings: { react: { version: "detect" } },
+    rules: {
+      ...pluginReactHooks.configs.recommended.rules,
+      "react/react-in-jsx-scope": "off",
+    },
+  },
 ];
+
+export default reactInternalConfig;
