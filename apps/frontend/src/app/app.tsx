@@ -4,7 +4,7 @@ export default function App() {
   return (
     <main>
       <h1>LifeQuest</h1>
-      <Button appName="LifeQuest">Начать</Button>
+      <Button>Начать квест</Button>
     </main>
   );
 }
