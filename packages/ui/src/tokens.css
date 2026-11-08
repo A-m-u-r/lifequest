@@ -1,1 +1,162 @@
-/* Общие дизайн-токены UI-кита. */
+:root {
+  --color-primary: #2d69ff;
+  --color-primary-hover: #2252f5;
+  --color-primary-light: #edf3ff;
+  --color-primary-medium: #dce7ff;
+
+  --color-secondary: #2cc285;
+  --color-secondary-hover: #19a874;
+  --color-secondary-light: #edfaf3;
+  --color-secondary-medium: #dff6ec;
+
+  --color-tertiary: #f59e0b;
+  --color-tertiary-hover: #d98206;
+  --color-tertiary-light: #fff8e8;
+  --color-tertiary-medium: #ffebba;
+
+  --color-success: #2cc285;
+  --color-success-light: #edfaf3;
+  --color-success-bg: #dff6ec;
+  --color-success-text: #12865f;
+
+  --color-warning: #f59e0b;
+  --color-warning-light: #fffbef;
+  --color-warning-bg: #fff3d9;
+  --color-warning-text: #b76a08;
+
+  --color-error: #ff293c;
+  --color-error-hover: #e51d32;
+  --color-error-light: #fff1f2;
+  --color-error-bg: #ffe2e5;
+  --color-error-text: #c91d32;
+
+  --color-info: #38bdf8;
+  --color-info-light: #f0faff;
+  --color-info-bg: #dff4ff;
+  --color-info-text: #0891c9;
+
+  --color-reward: #f59e0b;
+  --color-reward-light: #fff8e8;
+  --color-reward-bg: #fff3d9;
+  --color-reward-text: #b76a08;
+
+  --color-freeze: #38bdf8;
+  --color-freeze-light: #f0faff;
+  --color-freeze-bg: #dff4ff;
+  --color-freeze-text: #0891c9;
+
+  --color-accent: #8b5cf6;
+  --color-accent-hover: #7c3aed;
+  --color-accent-light: #f5f0ff;
+  --color-accent-medium: #e9ddff;
+
+  --color-gray-950: #13172a;
+  --color-gray-900: #1b2139;
+  --color-gray-800: #2e3952;
+  --color-gray-700: #40536c;
+  --color-gray-600: #60718b;
+  --color-gray-500: #7b8ca3;
+  --color-gray-400: #a2afc0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-200: #e1e8f0;
+  --color-gray-100: #f2f5fa;
+  --color-gray-50: #f8f9fd;
+
+  --surface-base: #ffffff;
+  --surface-subtle: #f8f9fd;
+  --surface-muted: #f2f5fa;
+  --surface-border: #e1e8f0;
+  --surface-hover: #edf3ff;
+  --surface-selected: #edf3ff;
+  --surface-selected-border: #2d69ff;
+  --surface-disabled: #e1e8f0;
+  --surface-inverse-muted: rgba(255, 255, 255, 0.12);
+  --surface-inverse-hover: rgba(255, 255, 255, 0.15);
+  --surface-overlay: rgba(27, 33, 57, 0.4);
+
+  --text-primary: #1b2139;
+  --text-secondary: #60718b;
+  --text-tertiary: #7b8ca3;
+  --text-muted: #a2afc0;
+  --text-disabled: #7b8ca3;
+  --text-inverse: #ffffff;
+  --text-inverse-secondary: #cbd5e1;
+  --text-link: #2d69ff;
+  --text-link-hover: #2252f5;
+
+  --font-headline:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-body:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 22px;
+  --text-2xl: 28px;
+  --text-3xl: 36px;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --leading-tight: 1.2;
+  --leading-snug: 1.25;
+  --leading-normal: 1.3;
+  --leading-relaxed: 1.35;
+  --leading-body: 1.6;
+  --leading-caption: 1.5;
+  --leading-badge: 1.4;
+
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+  --radius-circle: 50%;
+
+  --shadow-icon: 0 1px 2px rgba(27, 33, 57, 0.08);
+  --shadow-sm: 0 1px 2px 0 rgba(27, 33, 57, 0.04);
+  --shadow-md: 0 4px 8px -2px rgba(27, 33, 57, 0.06);
+  --shadow-lg: 0 12px 24px -6px rgba(27, 33, 57, 0.1);
+  --shadow-xl: 0 20px 40px -8px rgba(27, 33, 57, 0.14);
+  --shadow-focus: 0 0 0 3px rgba(45, 105, 255, 0.3);
+  --shadow-success-focus: 0 0 0 3px rgba(44, 194, 133, 0.3);
+  --shadow-error-focus: 0 0 0 3px rgba(255, 41, 60, 0.2);
+  --shadow-primary: 0 3px 6px rgba(45, 105, 255, 0.2);
+  --shadow-success: 0 3px 5px rgba(25, 168, 116, 0.18);
+
+  --gradient-primary: linear-gradient(110deg, #3069ff, #2252f5);
+  --gradient-success: linear-gradient(110deg, #2cc285, #19a874);
+
+  --layer-modal: 80;
+  --layer-tooltip: 100;
+
+  --size-tooltip: 240px;
+  --size-help-tip: 280px;
+  --size-modal-sm: 460px;
+  --size-modal-md: 760px;
+  --size-modal-lg: 880px;
+
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.3s ease;
+  --transition-slower: 0.4s ease;
+  --transition-slowest: 0.6s ease;
+}

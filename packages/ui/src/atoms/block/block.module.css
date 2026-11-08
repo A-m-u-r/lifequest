@@ -1,0 +1,62 @@
+.block {
+  box-sizing: border-box;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  border: 1px solid var(--surface-border);
+  background: var(--surface-base);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+.default {
+  background: var(--surface-base);
+}
+.muted {
+  background: var(--surface-subtle);
+}
+.primary {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary-medium);
+}
+.success {
+  background: var(--color-success-light);
+  border-color: var(--color-success-bg);
+}
+.warning {
+  background: var(--color-warning-light);
+  border-color: var(--color-tertiary-medium);
+}
+.info {
+  background: var(--color-info-light);
+  border-color: var(--color-info-bg);
+}
+.coupon {
+  border: 2px dashed var(--color-primary);
+  background: var(--surface-base);
+}
+.padding_none {
+  padding: 0;
+}
+.padding_sm {
+  padding: var(--sp-2);
+}
+.padding_md {
+  padding: var(--sp-4);
+}
+.padding_lg {
+  padding: var(--sp-5);
+}
+.radius_sm {
+  border-radius: var(--radius-sm);
+}
+.radius_md {
+  border-radius: var(--radius-md);
+}
+.radius_lg {
+  border-radius: var(--radius-lg);
+}
+.radius_xl {
+  border-radius: var(--radius-xl);
+}
+.radius_pill {
+  border-radius: var(--radius-pill);
+}

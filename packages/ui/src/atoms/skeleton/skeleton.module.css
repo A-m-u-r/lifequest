@@ -1,0 +1,22 @@
+.wrapper {
+  flex-shrink: 0;
+  background-color: var(--color-gray-200);
+  border-radius: var(--radius-md);
+  animation: skeleton-loading 1.5s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0%,
+  100% {
+    background-color: var(--color-gray-200);
+  }
+  50% {
+    background-color: var(--color-gray-300);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wrapper {
+    animation: none;
+  }
+}

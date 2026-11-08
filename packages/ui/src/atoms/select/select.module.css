@@ -1,0 +1,121 @@
+.ui_select {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.ui_select__label {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+.ui_select__label__disabled {
+  color: var(--text-muted);
+}
+
+.ui_select__required {
+  margin-left: 2px;
+  color: var(--color-error);
+}
+
+.ui_select__wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ui_select__field {
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--sp-2) calc(var(--sp-6) + var(--sp-1)) var(--sp-2) var(--sp-3);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: var(--leading-caption);
+  color: var(--text-primary);
+  background: var(--surface-subtle);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    background var(--transition-base);
+}
+
+.ui_select__field__placeholder {
+  color: var(--text-muted);
+}
+
+.ui_select__field:hover:not(:disabled) {
+  border-color: var(--color-gray-400);
+  background: var(--surface-base);
+}
+
+.ui_select__field:focus {
+  border-color: var(--color-primary);
+  background: var(--surface-base);
+  box-shadow: var(--shadow-focus);
+}
+
+.ui_select__field:disabled {
+  color: var(--text-muted);
+  background: var(--surface-subtle);
+  border-color: var(--surface-border);
+  cursor: not-allowed;
+}
+
+.ui_select__field__error,
+.ui_select__field__error:hover:not(:disabled) {
+  border-color: var(--color-error);
+  background: var(--color-error-light);
+}
+.ui_select__field__error:focus {
+  border-color: var(--color-error);
+  box-shadow: var(--shadow-error-focus);
+}
+
+.ui_select__chevron {
+  position: absolute;
+  right: var(--sp-3);
+  color: var(--text-tertiary);
+  pointer-events: none;
+}
+
+.ui_select__field:disabled + .ui_select__chevron {
+  color: var(--text-muted);
+}
+
+.ui_select__error {
+  margin-top: 2px;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-error);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ui_select,
+  .ui_select * {
+    transition: none;
+  }
+}
+
+.ui_select__field[aria-invalid="true"]:not(:disabled) {
+  border-color: var(--color-error);
+  background: var(--color-error-light);
+}
+.ui_select__field[aria-invalid="true"]:focus {
+  box-shadow: var(--shadow-error-focus);
+}
+.ui_select__field:disabled {
+  background: var(--surface-subtle);
+  border-color: var(--surface-border);
+  box-shadow: none;
+}
+
+.ui_select__field:has(option[value=""]:checked) {
+  color: var(--text-muted);
+}

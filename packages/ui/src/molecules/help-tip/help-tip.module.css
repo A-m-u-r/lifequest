@@ -1,0 +1,103 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: var(--radius-circle);
+  background: var(--surface-muted);
+  color: var(--text-tertiary);
+  cursor: pointer;
+  font-size: var(--text-xs);
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold);
+  line-height: 1;
+  transition:
+    background var(--transition-base),
+    color var(--transition-base);
+  flex-shrink: 0;
+}
+
+.trigger:hover,
+.trigger:focus-visible {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  outline: none;
+}
+
+.popover.popover {
+  width: min(var(--size-help-tip), calc(100vw - var(--sp-6)));
+  max-width: none;
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--text-inverse);
+  margin-bottom: var(--sp-2);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.step {
+  display: flex;
+  gap: var(--sp-2);
+  align-items: flex-start;
+}
+
+.step_num {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-circle);
+  background: var(--surface-inverse-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--text-inverse);
+  line-height: 1;
+  margin-top: 1px;
+}
+
+.step_text {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  line-height: var(--leading-caption);
+  color: var(--text-inverse-secondary);
+}
+
+.step_text code {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-inverse);
+  background: var(--surface-inverse-muted);
+  padding: 1px 5px;
+  border-radius: var(--radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root,
+  .root *,
+  .popover,
+  .popover * {
+    transition: none;
+    animation-duration: 1ms;
+  }
+}

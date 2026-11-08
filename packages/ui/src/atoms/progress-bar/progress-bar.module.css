@@ -1,0 +1,37 @@
+.track {
+  width: 100%;
+  min-width: 0;
+  height: var(--sp-2);
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: var(--color-gray-200);
+}
+
+.fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-primary);
+  transition: width var(--transition-slower);
+}
+
+.primary {
+  background: var(--color-primary);
+}
+.success {
+  background: var(--color-success);
+}
+.warning {
+  background: var(--color-warning);
+}
+.error {
+  background: var(--color-error);
+}
+.info {
+  background: var(--color-info);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fill {
+    transition: none;
+  }
+}
